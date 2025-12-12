@@ -2,6 +2,7 @@ package com.govind.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Data
@@ -19,5 +20,6 @@ public class CartItem {
     private int quantity;
 
     @ManyToOne
+    @JsonIgnore
     private Cart cart;
 }
